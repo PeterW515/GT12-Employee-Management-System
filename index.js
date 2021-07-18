@@ -179,17 +179,15 @@ const updateEmpRole = () => {
     connection.query(`SELECT id AS value, concat(first_name,' ',last_name) AS name FROM employee`, (err, res) => {
         if (err) throw err;
         updateEmpRoleQuestions[0].choices = res;
-        connection.query(`SELECT id AS value, title as name FROM role`, (err, res) => {
+        connection.query(`SELECT id AS value, title AS name FROM role`, (err, res) => {
             if (err) throw err;
-            addEmpQuestions[3].choices = res;
-            inquirer.prompt(addEmpQuestions).then((answers) => {
-                let newEmp = {
-                    first_name: answers.empFirst,
-                    last_name: answers.empLast,
-                    role_id: answers.empRole,
-                    manager_id: answers.empMgr
+            updateEmpRoleQuestions[1].choices = res;
+            inquirer.prompt(updateEmpRoleQuestions).then((answers) => {
+                let updateEmp = {
+                    id: answers.updateEmp,
+                    role_id: answers.newRole,
                 };
-                connection.query(`INSERT INTO employee set ?`, newEmp, (err, res) => {
+                connection.query(`UPDATE employee set role_id = ? WHERE id = ?`, [updateEmp.role_id,updateEmp.id], (err, res) => {
                     if (err) throw err;
                     console.log("Success!");
                     init();
