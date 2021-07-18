@@ -1,0 +1,24 @@
+{
+  "name": "gt12-employee-management-system",
+  "version": "1.0.0",
+  "description": "This Node app uses a mysql database to keep track of employees.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterW515/GT12-Employee-Management-System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterW515/GT12-Employee-Management-System/issues"
+  },
+  "homepage": "https://github.com/PeterW515/GT12-Employee-Management-System#readme",
+  "dependencies": {
+    "console.table": "^0.10.0",
+    "inquirer": "^8.1.2",
+    "mysql": "^2.18.1"
+  }
+}
