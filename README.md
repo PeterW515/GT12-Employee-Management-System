@@ -4,6 +4,8 @@
 
   This node app interacts with a mysql database to maintain an employee management system. The command line interface uses Inquirer to allow the user to choose from a variety of operations, and then the app will update the database accordingly.
   
+  A recording of the basic functionality can be found here: https://drive.google.com/file/d/1mLitOLSeS_oK1P8TSjA4srgBuB36CoFc/view
+  
   ![image](https://user-images.githubusercontent.com/78565748/126253570-6557e4f4-4ff4-40a2-898b-8f73640207d8.png)
 
 
